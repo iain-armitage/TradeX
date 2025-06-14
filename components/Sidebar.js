@@ -1,20 +1,26 @@
 
 import Link from 'next/link';
 
-const Sidebar = () => {
+const links = [
+  { name: 'Dashboard', href: '/dashboard' },
+  { name: 'Contacts', href: '/contacts' },
+  { name: 'Quotes', href: '/quotes' },
+  { name: 'Projects', href: '/projects' },
+  { name: 'Reports', href: '/reports' },
+  { name: 'Settings', href: '/settings' }
+];
+
+export default function Sidebar() {
   return (
-    <div className="w-64 h-screen bg-gray-900 text-white fixed left-0 top-0 p-4">
-      <h2 className="text-2xl font-bold mb-6">TradeX</h2>
-      <ul className="space-y-4">
-        <li><Link href="/dashboard">Dashboard</Link></li>
-        <li><Link href="/contacts">Contacts</Link></li>
-        <li><Link href="/quotes">Quotes</Link></li>
-        <li><Link href="/projects">Projects</Link></li>
-        <li><Link href="/reports">Reports</Link></li>
-        <li><Link href="/settings">Settings</Link></li>
-      </ul>
+    <div className="w-64 bg-gray-800 text-white p-4 flex flex-col">
+      <div className="text-2xl font-bold mb-8">TradeX</div>
+      <nav className="flex flex-col space-y-4">
+        {links.map((link) => (
+          <Link key={link.name} href={link.href} className="hover:text-blue-400">
+            {link.name}
+          </Link>
+        ))}
+      </nav>
     </div>
   );
-};
-
-export default Sidebar;
+}

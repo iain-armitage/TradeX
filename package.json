@@ -1,5 +1,6 @@
+
 {
-  "name": "tradex-nextjs",
+  "name": "tradex-ui-refresh",
   "version": "0.1.0",
   "private": true,
   "scripts": {

@@ -1,15 +1,15 @@
 
 import Sidebar from './Sidebar';
+import Topbar from './Topbar';
 
-const Layout = ({ children }) => {
+export default function Layout({ children }) {
   return (
-    <div className="flex">
+    <div className="flex h-screen bg-gray-100">
       <Sidebar />
-      <main className="ml-64 p-6 w-full bg-gray-50 min-h-screen">
-        {children}
-      </main>
+      <div className="flex flex-col flex-1">
+        <Topbar />
+        <main className="p-6 overflow-y-auto">{children}</main>
+      </div>
     </div>
   );
-};
-
-export default Layout;
+}
