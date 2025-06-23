@@ -2,6 +2,8 @@
 
 This is the initial boilerplate for your TradeX SaaS platform built with Next.js and Tailwind CSS.
 
+Charts on the dashboard are rendered using [Recharts](https://recharts.org/).
+
 ## Prerequisites
 
 - **Node.js**: version 16.14 or later is recommended to build and run the application.
@@ -14,6 +16,8 @@ Install dependencies and start the development server:
 npm install
 npm run dev
 ```
+
+This command installs all project dependencies, including Recharts for the dashboard graphs.
 
 Open your browser at `http://localhost:3000` to view the app. You should see a sidebar with navigation links, a top bar titled "Dashboard", and a welcome message in the main area.
 
